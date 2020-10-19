@@ -5,12 +5,10 @@ Home: https://github.com/ignitionrobotics/ign-physics
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libignition-physics-feedstock/blob/master/LICENSE.txt)
 
 Summary: Ignition Physics, a component of Ignition Robotics, provides an abstract physics interface designed to support simulation
 and rapid development of robot applications.
-
-
 
 
 Current build status
@@ -50,7 +48,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-libignition--physics2-green.svg)](https://anaconda.org/conda-forge/libignition-physics2) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libignition-physics2.svg)](https://anaconda.org/conda-forge/libignition-physics2) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libignition-physics2.svg)](https://anaconda.org/conda-forge/libignition-physics2) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libignition-physics2.svg)](https://anaconda.org/conda-forge/libignition-physics2) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libignition--physics3-green.svg)](https://anaconda.org/conda-forge/libignition-physics3) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libignition-physics3.svg)](https://anaconda.org/conda-forge/libignition-physics3) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libignition-physics3.svg)](https://anaconda.org/conda-forge/libignition-physics3) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libignition-physics3.svg)](https://anaconda.org/conda-forge/libignition-physics3) |
 
 Installing libignition-physics
 ==============================
@@ -61,16 +59,16 @@ Installing `libignition-physics` from the `conda-forge` channel can be achieved 
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `libignition-physics2` can be installed with:
+Once the `conda-forge` channel has been enabled, `libignition-physics3` can be installed with:
 
 ```
-conda install libignition-physics2
+conda install libignition-physics3
 ```
 
-It is possible to list all of the versions of `libignition-physics2` available on your platform with:
+It is possible to list all of the versions of `libignition-physics3` available on your platform with:
 
 ```
-conda search libignition-physics2 --channel conda-forge
+conda search libignition-physics3 --channel conda-forge
 ```
 
 
