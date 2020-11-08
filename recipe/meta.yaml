@@ -20,7 +20,8 @@ build:
 outputs:
   - name: {{ name }}
     version: {{ version }}
-    script: bldpkg.bat
+    script: bldpkg.bat           # [win]
+    script: build.sh             # [not win]
     requirements:
       build:
         - {{ compiler('cxx') }}  # [not win]
