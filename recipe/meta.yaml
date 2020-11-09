@@ -29,7 +29,10 @@ requirements:
     - libignition-cmake2
     - libignition-plugin1
     - libignition-math6
+    - libignition-common3
+    - libsdformat10
     - eigen
+    - dartsim                 # [unix]
   run:
     - libignition-math6
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
