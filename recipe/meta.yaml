@@ -30,7 +30,7 @@ requirements:
     - libignition-plugin1
     - libignition-math6
     - libignition-common3
-    - libsdformat10
+    - libsdformat10           # [unix]
     - eigen
     - dartsim                 # [unix]
   run:
