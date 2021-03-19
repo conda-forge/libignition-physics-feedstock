@@ -32,7 +32,7 @@ requirements:
     - eigen
     - dartsim
     # Workaround for https://github.com/conda-forge/libode-feedstock/pull/5
-    - libode >= 0.16.2
+    - libode >=0.16.2
   run:
     - libignition-math6
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
