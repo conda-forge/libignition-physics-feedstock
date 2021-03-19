@@ -28,7 +28,7 @@ requirements:
     - libignition-plugin1
     - libignition-math6
     - libignition-common3
-    - libsdformat10           # [unix]
+    - libsdformat10
     - eigen
     - dartsim
     # Workaround for https://github.com/conda-forge/libode-feedstock/pull/5
@@ -40,7 +40,9 @@ requirements:
 test:
   commands:
     - test -f ${PREFIX}/include/ignition/physics{{ major_version }}/ignition/physics.hh  # [not win]
-    - if exist %PREFIX%\\Library\\include\\ignition\physics{{ major_version }}\ignition\physics.hh (exit 0) else (exit 1)  # [win]
+    - test -f ${PREFIX}/lib/cmake/ignition-physics{{ major_version }}-dartsim/ignition-physics{{ major_version }}-dartsim-config.cmake  # [not win]
+    - if not exist %PREFIX%\\Library\\include\\ignition\physics{{ major_version }}\ignition\physics.hh (exit 1)  # [win]
+    - if not exist %PREFIX%\\Library\\lib\\cmake\\ignition-physics{{ major_version }}-dartsim\\ignition-physics{{ major_version }}-dartsim-config.cmake  exit 1  # [win]
 
 about:
   home: https://github.com/ignitionrobotics/ign-physics
