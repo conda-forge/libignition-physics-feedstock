@@ -23,3 +23,7 @@ cmake .. \
 
 cmake --build . --config Release ${NUM_PARALLEL}
 cmake --build . --config Release --target install ${NUM_PARALLEL}
+
+if [ ${target_platform} != "linux-ppc64le" ]; then
+  ctest --output-on-failure -C Release
+fi
