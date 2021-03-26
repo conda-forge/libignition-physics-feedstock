@@ -32,6 +32,7 @@ requirements:
     - libsdformat10
     - eigen
     - dartsim
+    - libode
 
   run:
     - libignition-math6
