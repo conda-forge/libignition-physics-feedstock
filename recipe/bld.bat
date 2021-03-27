@@ -1,9 +1,3 @@
-:: clang-cl is used for template problems. 
-:: Perhaps this can be changed once vs2019 is used
-set "CC=clang-cl.exe"
-set "CXX=clang-cl.exe"
-set "CL=/MP"
-
 mkdir build
 cd build
 
