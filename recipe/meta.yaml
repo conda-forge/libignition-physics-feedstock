@@ -10,6 +10,8 @@ package:
 source:
   - url: https://github.com/ignitionrobotics/ign-physics/archive/ignition-physics{{ major_version }}_{{ version }}.tar.gz
     sha256: b8e5460d2808e20237b2ee0a6a6b7613b56412f5f6e2a5e153e48e8faae8ab77
+    patches:
+      - vs2017_support.patch 
 
 build:
   number: 4
