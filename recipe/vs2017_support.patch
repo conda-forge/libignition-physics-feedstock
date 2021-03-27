@@ -11,13 +11,14 @@ diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
 index 3df39ced..86dffa19 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -7,6 +7,11 @@ target_link_libraries(${PROJECT_LIBRARY_TARGET_NAME}
+@@ -7,6 +7,12 @@ target_link_libraries(${PROJECT_LIBRARY_TARGET_NAME}
      ${ignition-math${IGN_MATH_VER}_LIBRARIES}
      ignition-plugin${IGN_PLUGIN_VER}::register)
  
 +if(MSVC)
 +  target_compile_definitions(${PROJECT_LIBRARY_TARGET_NAME} 
 +    PUBLIC _ENABLE_EXTENDED_ALIGNED_STORAGE)
++  target_compile_options(${PROJECT_LIBRARY_TARGET_NAME} PRIVATE /permissive-)
 +endif()  
 +
  target_include_directories(${PROJECT_LIBRARY_TARGET_NAME}
