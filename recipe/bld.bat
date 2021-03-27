@@ -9,6 +9,7 @@ cmake ^
     -DCMAKE_CXX_STANDARD=17 ^
     -DBUILD_TESTING=ON ^
     -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON ^
+    -DCMAKE_CXX_FLAGS="/permissive-" ^
     %SRC_DIR%
 if errorlevel 1 exit 1
 
