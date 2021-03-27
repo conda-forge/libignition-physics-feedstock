@@ -1,7 +1,3 @@
-:: MSVC is preferred.
-set CC=cl.exe
-set CXX=cl.exe
-
 mkdir build
 cd build
 
@@ -11,7 +7,9 @@ cmake ^
     -DCMAKE_BUILD_TYPE=Release ^
     -DCMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP=True ^
     -DCMAKE_CXX_STANDARD=17 ^
-    -DBUILD_TESTING=OFF ^
+    -DBUILD_TESTING=ON ^
+    -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON ^
+    -DCMAKE_CXX_FLAGS="/permissive- /D_USE_MATH_DEFINES" ^
     %SRC_DIR%
 if errorlevel 1 exit 1
 
@@ -21,4 +19,8 @@ if errorlevel 1 exit 1
 
 :: Install.
 cmake --build . --config Release --target install
+if errorlevel 1 exit 1
+
+:: Test
+ctest --output-on-failure -C Release -E "check_"
 if errorlevel 1 exit 1

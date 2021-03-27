@@ -1,0 +1,26 @@
+From 85f6d64934a0dabffd56ab2775f305575e15853e Mon Sep 17 00:00:00 2001
+From: Silvio Traversaro <silvio.traversaro@iit.it>
+Date: Sat, 27 Mar 2021 11:41:50 +0100
+Subject: [PATCH] Update CMakeLists.txt
+
+---
+ src/CMakeLists.txt | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 3df39ced..86dffa19 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -7,6 +7,12 @@ target_link_libraries(${PROJECT_LIBRARY_TARGET_NAME}
+     ${ignition-math${IGN_MATH_VER}_LIBRARIES}
+     ignition-plugin${IGN_PLUGIN_VER}::register)
+ 
++if(MSVC)
++  target_compile_definitions(${PROJECT_LIBRARY_TARGET_NAME} 
++    PUBLIC _ENABLE_EXTENDED_ALIGNED_STORAGE)
++  target_compile_options(${PROJECT_LIBRARY_TARGET_NAME} PRIVATE /permissive-)
++endif()  
++
+ target_include_directories(${PROJECT_LIBRARY_TARGET_NAME}
+   SYSTEM PUBLIC
+     ${EIGEN3_INCLUDE_DIRS})
