@@ -30,8 +30,8 @@ requirements:
     - libignition-cmake2
     - libignition-plugin1
     - libignition-math6
-    - libignition-common3
-    - libsdformat10
+    - libignition-common4
+    - libsdformat11
     - eigen
     - dartsim
     - libode
