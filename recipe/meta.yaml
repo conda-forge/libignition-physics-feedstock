@@ -1,5 +1,5 @@
 {% set base_name = "libignition-physics" %}
-{% set version = "3.1.0" %}
+{% set version = "4.0.0" %}
 {% set major_version = version.split('.')[0] %}
 {% set name = base_name + major_version %}
 
@@ -9,19 +9,19 @@ package:
 
 source:
   - url: https://github.com/ignitionrobotics/ign-physics/archive/ignition-physics{{ major_version }}_{{ version }}.tar.gz
-    sha256: b8e5460d2808e20237b2ee0a6a6b7613b56412f5f6e2a5e153e48e8faae8ab77
+    sha256: b7128f5666a2a7ff60bfb03de7f1d08c194bddf3c8e52c6e3e3d05e6b4421494
     patches:
       - vs2017_support.patch
       - 148.patch
 
 build:
-  number: 4
+  number: 0
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
 
 requirements:
   build:
-    - {{ compiler('cxx') }} 
+    - {{ compiler('cxx') }}
     - {{ compiler('c') }}
     - clang  # [win]
     - cmake
