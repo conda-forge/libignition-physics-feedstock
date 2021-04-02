@@ -31,6 +31,7 @@ requirements:
     - libignition-plugin1
     - libignition-math6
     - libignition-common4
+    - libignition-utils1
     - libsdformat11
     - eigen
     - dartsim
