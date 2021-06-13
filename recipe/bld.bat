@@ -3,6 +3,8 @@ cd build
 
 cmake ^
     -G "Ninja" ^
+    -DCMAKE_C_COMPILER=clang-cl ^
+    -DCMAKE_CXX_COMPILER=clang-cl ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
     -DCMAKE_BUILD_TYPE=Release ^
     -DCMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP=True ^
