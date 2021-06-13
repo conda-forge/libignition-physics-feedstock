@@ -1,0 +1,50 @@
+From 13ba0fd7f38441cb25fbb93bf91534410cc80277 Mon Sep 17 00:00:00 2001
+From: Steve Peters <scpeters@openrobotics.org>
+Date: Thu, 22 Apr 2021 15:59:08 -0700
+Subject: [PATCH] Use [gs]etPrimarySlipCompliance with dart 6.10.0
+
+These APIs are used in the upstream release of dartsim 6.10.0
+but are missing from our fork. We should add them to the fork and
+build more debs before merging this.
+
+Signed-off-by: Steve Peters <scpeters@openrobotics.org>
+---
+ dartsim/src/SDFFeatures.cc   | 2 +-
+ dartsim/src/ShapeFeatures.cc | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/dartsim/src/SDFFeatures.cc b/dartsim/src/SDFFeatures.cc
+index 8baff95a..3dc16fc4 100644
+--- a/dartsim/src/SDFFeatures.cc
++++ b/dartsim/src/SDFFeatures.cc
+@@ -818,7 +818,7 @@ Identity SDFFeatures::ConstructSdfCollision(
+     }
+     if (odeFriction->HasElement("slip1"))
+     {
+-      aspect->setSlipCompliance(odeFriction->Get<double>("slip1"));
++      aspect->setPrimarySlipCompliance(odeFriction->Get<double>("slip1"));
+     }
+     if (odeFriction->HasElement("slip2"))
+     {
+diff --git a/dartsim/src/ShapeFeatures.cc b/dartsim/src/ShapeFeatures.cc
+index c5126414..4cec3feb 100644
+--- a/dartsim/src/ShapeFeatures.cc
++++ b/dartsim/src/ShapeFeatures.cc
+@@ -469,7 +469,7 @@ double ShapeFeatures::GetShapeFrictionPyramidPrimarySlipCompliance(
+       << std::endl;
+     return 0.0;
+   }
+-  return aspect->getSlipCompliance();
++  return aspect->getPrimarySlipCompliance();
+ }
+ 
+ /////////////////////////////////////////////////
+@@ -505,7 +505,7 @@ bool ShapeFeatures::SetShapeFrictionPyramidPrimarySlipCompliance(
+       << std::endl;
+     return false;
+   }
+-  aspect->setSlipCompliance(_value);
++  aspect->setPrimarySlipCompliance(_value);
+   return true;
+ }
+ 
