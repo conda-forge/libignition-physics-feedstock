@@ -23,7 +23,7 @@ requirements:
   build:
     - {{ compiler('cxx') }} 
     - {{ compiler('c') }}
-    - clang  # [win]
+    # - clang  # [win]
     - cmake
     - ninja
     - pkg-config
