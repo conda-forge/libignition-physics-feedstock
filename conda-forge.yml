@@ -1,6 +1,9 @@
-azure:
-  settings_win:
-    pool:
-      vmImage: windows-2019
 conda_forge_output_validation: true
 provider: {linux_aarch64: default, linux_ppc64le: default}
+bot:
+  abi_migration_branches:
+    - "v3"
+azure:
+  settings_win:
+      pool:
+          vmImage: windows-2019
