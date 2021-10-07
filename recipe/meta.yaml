@@ -14,7 +14,6 @@ source:
     patches:
       - vs2017_support.patch
       - disable_fake_install.patch
-      - 249.patch
 
 build:
   number: 0
