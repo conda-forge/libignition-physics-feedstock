@@ -34,7 +34,7 @@ requirements:
     - libignition-math6
     - libignition-common4
     - libignition-utils1
-    - libsdformat11
+    - libsdformat12
     - eigen
     - dartsim
     - libode
