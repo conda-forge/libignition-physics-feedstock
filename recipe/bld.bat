@@ -14,8 +14,7 @@ cmake ^
 if errorlevel 1 exit 1
 
 :: Build.
-:: Only use one thread to avoid out of memory issues (https://github.com/conda-forge/libignition-physics-feedstock/pull/21#issuecomment-938662928)
-cmake --build . --parallel 1 --config Release
+cmake --build . --config Release
 if errorlevel 1 exit 1
 
 :: Install.
