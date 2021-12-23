@@ -2,9 +2,6 @@ azure:
   settings_win:
     pool:
       vmImage: windows-2019
-bot:
-  abi_migration_branches:
-  - v3
 build_platform:
   osx_arm64: osx_64
 conda_forge_output_validation: true
