@@ -3,7 +3,7 @@
 mkdir build
 cd build
 
-if [ ${target_platform} == "linux-ppc64le" ]; then
+if [[ ${target_platform} == "linux-ppc64le" || ${target_platform} == "linux-aarch64" ]]; then
   # Disable tests
   IGN_TEST_CMD=-DBUILD_TESTING:BOOL=OFF
   NUM_PARALLEL=-j1
