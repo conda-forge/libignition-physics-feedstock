@@ -3,15 +3,6 @@
 mkdir build
 cd build
 
-if [[ ${target_platform} == "linux-ppc64le" || ${target_platform} == "linux-aarch64" ]]; then
-  # Disable tests
-  IGN_TEST_CMD=-DBUILD_TESTING:BOOL=OFF
-  NUM_PARALLEL=-j1
-else
-  IGN_TEST_CMD=
-  NUM_PARALLEL=
-fi
-
 cmake ${CMAKE_ARGS} .. \
       -G "Ninja" \
       -DCMAKE_BUILD_TYPE=Release \
