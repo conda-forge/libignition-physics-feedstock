@@ -3,15 +3,6 @@
 mkdir build
 cd build
 
-if [ ${target_platform} == "linux-ppc64le" ]; then
-  # Disable tests
-  IGN_TEST_CMD=-DBUILD_TESTING:BOOL=OFF
-  NUM_PARALLEL=-j1
-else
-  IGN_TEST_CMD=
-  NUM_PARALLEL=
-fi
-
 cmake ${CMAKE_ARGS} .. \
       -G "Ninja" \
       -DCMAKE_BUILD_TYPE=Release \
@@ -30,6 +21,6 @@ if [ ${target_platform} != "linux-ppc64le" ]; then
   # Remove test that fail on macOS: https://github.com/conda-forge/libignition-physics-feedstock/issues/13
   # Remove test INTEGRATION_ExamplesBuild_TEST that fails on multiple platforms: https://github.com/conda-forge/libignition-physics-feedstock/pull/14
 if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
-  ctest --output-on-failure -C Release -E "INTEGRATION_FrameSemantics2d|INTEGRATION_JointTypes2f|UNIT_Collisions_TEST|UNIT_EntityManagement_TEST|UNIT_JointFeatures_TEST|UNIT_LinkFeatures_TEST|UNIT_SDFFeatures_TEST|UNIT_SimulationFeatures_TEST|INTEGRATION_ExamplesBuild_TEST|UNIT_WorldFeatures_TEST|UNIT_ShapeFeatures_TEST|UNIT_FreeGroupFeatures_TEST|UNIT_KinematicsFeatures_TEST"
+  ctest --output-on-failure -C Release -E "INTEGRATION_FrameSemantics2d|INTEGRATION_JointTypes2f|UNIT_Collisions_TEST|UNIT_EntityManagement_TEST|UNIT_JointFeatures_TEST|UNIT_LinkFeatures_TEST|UNIT_SDFFeatures_TEST|UNIT_SimulationFeatures_TEST|INTEGRATION_ExamplesBuild_TEST|UNIT_WorldFeatures_TEST|UNIT_ShapeFeatures_TEST|UNIT_FreeGroupFeatures_TEST|UNIT_KinematicsFeatures_TEST|PERFORMANCE"
 fi
 fi
