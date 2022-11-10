@@ -1,5 +1,5 @@
 assimp:
-- 5.2.4
+- 5.2.5
 c_compiler:
 - vs2019
 channel_sources:
