@@ -17,7 +17,7 @@ source:
       - disable_integration_tests.patch  # [win]
 
 build:
-  number: 0
+  number: 1
   skip: false
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
