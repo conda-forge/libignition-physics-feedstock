@@ -37,7 +37,7 @@ requirements:
     - libignition-utils1
     - libsdformat12
     - eigen
-    - ccd
+    - libccd-double
     - assimp
     - dartsim
     - libode
