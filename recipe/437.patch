@@ -1,0 +1,13 @@
+diff --git a/bullet/CMakeLists.txt b/bullet/CMakeLists.txt
+index ad1af1d55..adce770c1 100644
+--- a/bullet/CMakeLists.txt
++++ b/bullet/CMakeLists.txt
+@@ -42,8 +42,6 @@ else()
+   EXECUTE_PROCESS(COMMAND ${CMAKE_COMMAND} -E create_symlink ${versioned} ${unversioned})
+   INSTALL(FILES ${PROJECT_BINARY_DIR}/${unversioned} DESTINATION ${IGNITION_PHYSICS_ENGINE_INSTALL_DIR})
+ endif()
+-EXECUTE_PROCESS(COMMAND ${CMAKE_COMMAND} -E create_symlink ${versioned} ${unversioned})
+-INSTALL(FILES ${PROJECT_BINARY_DIR}/${unversioned} DESTINATION ${IGNITION_PHYSICS_ENGINE_INSTALL_DIR})
+ 
+ # Testing
+ ign_build_tests(
