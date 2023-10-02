@@ -40,7 +40,7 @@ requirements:
     - eigen
     - libccd-double
     - assimp
-    - dartsim
+    - dartsim 6.12.*
     - libode
 
   run:
