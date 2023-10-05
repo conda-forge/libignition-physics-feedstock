@@ -1,11 +1,11 @@
-About libignition-physics5
-==========================
+About libignition-physics5-feedstock
+====================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libignition-physics-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/ignitionrobotics/ign-physics
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libignition-physics-feedstock/blob/main/LICENSE.txt)
 
 Summary: Ignition Physics, a component of Ignition Robotics, provides an abstract physics interface designed to support simulation
 and rapid development of robot applications.
