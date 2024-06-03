@@ -20,6 +20,8 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '16'
+libboost_devel:
+- '1.82'
 libode:
 - 0.16.2
 macos_machine:
