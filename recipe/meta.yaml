@@ -18,7 +18,7 @@ source:
       - disable_integration_tests.patch  # [win]
 
 build:
-  number: 4
+  number: 5
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
@@ -27,6 +27,7 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - cmake
     - ninja
     - pkg-config
@@ -44,7 +45,6 @@ requirements:
     - libode
 
   run:
-    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
 test:
   commands:
