@@ -41,6 +41,8 @@ requirements:
     - eigen
     - libccd-double
     - assimp
+    # Required by dartsim 6.12.*
+    - libboost-devel
     - dartsim 6.12.*
     - libode
 
