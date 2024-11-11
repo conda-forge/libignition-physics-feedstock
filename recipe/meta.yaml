@@ -18,7 +18,7 @@ source:
       - disable_integration_tests.patch  # [win]
 
 build:
-  number: 7
+  number: 8
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
