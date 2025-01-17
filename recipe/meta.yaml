@@ -12,7 +12,6 @@ source:
   - url: https://github.com/ignitionrobotics/ign-physics/archive/ignition-physics{{ version }}.tar.gz
     sha256: 6d6591a6552bdccce7e17bc982d698c05fba98b1256053db4b1b3bdf83c81be0
     patches:
-      - 437.patch
       - vs2017_support.patch
       - disable_fake_install.patch
       - disable_integration_tests.patch  # [win]
