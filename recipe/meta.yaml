@@ -15,6 +15,7 @@ source:
       - vs2017_support.patch
       - disable_fake_install.patch
       - disable_integration_tests.patch  # [win]
+      - 768.patch
 
 build:
   number: 0
