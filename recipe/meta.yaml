@@ -15,9 +15,10 @@ source:
       - vs2017_support.patch
       - disable_fake_install.patch
       - disable_integration_tests.patch  # [win]
+      - 768.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
