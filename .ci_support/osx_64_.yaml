@@ -23,7 +23,7 @@ cxx_compiler_version:
 libboost_devel:
 - '1.88'
 libode:
-- 0.16.5
+- 0.16.6
 macos_machine:
 - x86_64-apple-darwin13.4.0
 target_platform:

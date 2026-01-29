@@ -21,7 +21,7 @@ docker_image:
 libboost_devel:
 - '1.88'
 libode:
-- 0.16.5
+- 0.16.6
 target_platform:
 - linux-aarch64
 zip_keys:
